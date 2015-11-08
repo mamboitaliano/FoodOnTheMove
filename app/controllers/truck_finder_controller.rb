@@ -7,7 +7,7 @@ class TruckFinderController < ApplicationController
     # @trucks = Truck.all
     # @trucks = Truck.select("distinct applicant")
     if (params[:truck_name])
-      @trucks = Truck.where(applicant:params[:truck_name])
+      @trucks = Truck.where(applicant:params[:truck_name].downcase)
     elsif (params[:distance])
       @trucks = Truck.all
     elsif (params[:food_item])
