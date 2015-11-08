@@ -1,2 +1,51 @@
-<h1> SUP! </h1>
-<%= Yelp.client.search('San Francisco', { term: 'food' }) %>
+<h1 class = "text-center"> Food on the Move! </h1>
+
+<div class = "container">
+  <div class = "row">
+
+    <div class="col-sm-1"></div>
+
+    <div class="col-sm-2">
+      <%= form_tag("/search", method:"get") do %>
+
+        <%= label_tag(:food_item, "What are you in the mood for?")%>
+        <%= text_field_tag(:food_item) %>
+        <%= submit_tag("Search") %>
+
+      <% end %>
+    </div>
+
+    <div class="col-sm-2">
+      <%= radio_button_tag(:distance, "Close")%>
+      <%= label_tag(:less_than_five, "Less Than 5 miles") %> <br>
+      <%= radio_button_tag(:distance, "5 miles") %>
+      <%= label_tag(:five, "5 miles") %> <br>
+      <%= radio_button_tag(:distance, "10 miles")%>
+      <%= label_tag(:less_than_five, "10 miles") %> <br>
+      <%= radio_button_tag(:distance, "Far") %>
+      <%= label_tag(:five, "More Than 10 miles") %><br>
+    </div>
+
+    <div class="col-sm-2">
+      <%= form_tag("/search", method:"get") do %>
+
+        <%= label_tag(:truck_name, "Find a Truck?")%>
+        <%= text_field_tag(:truck_name) %>
+        <%= submit_tag("Search") %>
+
+      <% end %>
+    </div>
+
+  </div>
+</div>
+
+
+<div>
+  <% @trucks.each do |truck| %>
+  <p> <%= truck.applicant %>, <%= truck.facility_type %>, <%= truck.address %></p>
+  <% end%>
+</div>
+
+<div id="map">
+
+</div>
