@@ -13,4 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require video
+//= require bigvideo
+//= require jquery.imagesloaded.min
 //= require_tree .

@@ -9,3 +9,26 @@ Features include:
 
 
 
+--------
+
+google maps api
+yelp api
+SF OpenData
+
+MVP
+----Google Maps----
+pass in longitude lat for pin points
+
+pass in current location, and potentional distance and given point
+
+----SF OpenData----
+filters on data in this data base
+
+basic filters- fooditems, food categories
+
+
+----Yelp api-----
+Pass in name of food truck for basic reviews and information.
+
+
+
