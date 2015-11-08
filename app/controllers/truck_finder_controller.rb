@@ -1,5 +1,6 @@
 class TruckFinderController < ApplicationController
 	def index
+    @foodtrucks = Truck.all
     # if params
     #   p "*" * 100
     #   p params

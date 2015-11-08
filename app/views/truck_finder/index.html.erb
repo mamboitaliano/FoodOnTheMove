@@ -35,6 +35,7 @@
 
       <% end %>
     </div>
+    <p> <%=@foodtrucks%> </p>
 
   </div>
 </div>
@@ -45,6 +46,43 @@
   <p> <%= truck.applicant %>, <%= truck.facility_type %>, <%= truck.address %></p>
   <% end%>
 </div>
+
+<script type="text/javascript">
+	function initialize() {
+		var mapCanvas = document.getElementById('map');
+
+		var mapOptions = {
+			center: new google.maps.LatLng(37.7833, -122.4167),
+			zoom: 13,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		}
+		var map = new google.maps.Map(mapCanvas, mapOptions);
+
+		<% @foodtrucks.each do |t| %>
+			<% unless t.latitude == nil %>
+				var lat = "<%= t.latitude %>"
+				var lon = "<%= t.longitude %>"
+				var title = "<%= t.applicant %>"
+				var position = new google.maps.LatLng(lat, lon);
+				console.log(lat + ' ' + lon);
+
+				function createMarker(position, map, title) {
+					marker = new google.maps.Marker({
+						position: position,
+						map: map,
+						title: title
+					});
+				}
+				createMarker(position, map, title);
+			<% end %>
+		<% end %>
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+
+</script>
+
+
 
 <div id="map">
 
