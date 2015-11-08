@@ -15,14 +15,14 @@ csv.each do |row|
   t = Truck.new
 
   t.location = row['locationid']
-  t.applicant = row['Applicant']
+  t.applicant = row['Applicant'].downcase if row['Applicant']
   t.facility_type = row['FacilityType']
   t.location_description = row['LocationDescription']
   t.address = row['Address']
   t.block = row['block']
   t.lot = row['lot']
   t.status = row['Status']
-  t.food_items = row['FoodItems']
+  t.food_items = row['FoodItems'].downcase if row['FoodItems']
   t.x = row['X']
   t.y = row['Y']
   t.latitude = row['Latitude']

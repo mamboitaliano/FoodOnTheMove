@@ -1,19 +1,51 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	    <title>FoodOnTheMove</title>
-	    <meta name="viewport" content="initial-scale=1.0">
-	    <meta charset="utf-8">
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAHcH2vNO7-2i6pA4CrCSn7qTs8uH3FHs&callback=initMap"></script>
-		<%= javascript_include_tag "application" %>
- 	</head>
+<h1 class = "text-center"> Food on the Move! </h1>
 
- 	<body>
-	    <div id="map">
-<!-- 	    	<div id="map-canvas">
-	    		
-	    	</div> -->
-	    </div>
-    </body>
-</html>
-    
+<div class = "container">
+  <div class = "row">
+
+    <div class="col-sm-1"></div>
+
+    <div class="col-sm-2">
+      <%= form_tag("/search", method:"get") do %>
+
+        <%= label_tag(:food_item, "What are you in the mood for?")%>
+        <%= text_field_tag(:food_item) %>
+        <%= submit_tag("Search") %>
+
+      <% end %>
+    </div>
+
+    <div class="col-sm-2">
+      <%= radio_button_tag(:distance, "Close")%>
+      <%= label_tag(:less_than_five, "Less Than 5 miles") %> <br>
+      <%= radio_button_tag(:distance, "5 miles") %>
+      <%= label_tag(:five, "5 miles") %> <br>
+      <%= radio_button_tag(:distance, "10 miles")%>
+      <%= label_tag(:less_than_five, "10 miles") %> <br>
+      <%= radio_button_tag(:distance, "Far") %>
+      <%= label_tag(:five, "More Than 10 miles") %><br>
+    </div>
+
+    <div class="col-sm-2">
+      <%= form_tag("/search", method:"get") do %>
+
+        <%= label_tag(:truck_name, "Find a Truck?")%>
+        <%= text_field_tag(:truck_name) %>
+        <%= submit_tag("Search") %>
+
+      <% end %>
+    </div>
+
+  </div>
+</div>
+
+
+<div>
+  <% @trucks.each do |truck| %>
+  <p> <%= truck.applicant %>, <%= truck.facility_type %>, <%= truck.address %></p>
+  <% end%>
+</div>
+
+<div id="map">
+
+</div>
