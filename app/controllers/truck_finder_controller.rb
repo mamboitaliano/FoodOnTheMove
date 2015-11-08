@@ -1,6 +1,8 @@
 class TruckFinderController < ApplicationController
 	def index
-    if (params[:truck_name])
+    if(params[:truck_name] == '' || params[:food_item] == '')
+      @trucks = Truck.all
+    elsif (params[:truck_name])
       @trucks = Truck.where(applicant:params[:truck_name].downcase)
     elsif (params[:distance])
       @trucks = Truck.all
