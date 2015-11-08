@@ -31,3 +31,4 @@ csv.each do |row|
   t.save
   puts "#{t.applicant} Entered!!!"
 end
+
