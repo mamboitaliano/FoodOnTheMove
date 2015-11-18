@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui-1.8.22.custom.min
 //= require turbolinks
+//= require jquery.imagesloaded.min
 //= require video
 //= require bigvideo
-//= require jquery.imagesloaded.min
 //= require_tree .
+
+
