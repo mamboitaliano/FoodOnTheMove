@@ -2,8 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.container {
+  margin-left: 10px !important;
+  margin-right: 10px !important;
+}
+
 #map {
-   height: 530px;
+   height: 400px;
    width: 60%;
 
    border-radius: 16px 16px;
@@ -26,3 +31,23 @@
 //body {
 //  background-image: url("http://kareemcarts.com/cart/wp-content/uploads/2013/08/Orange-Lunch-Truck-8.jpg");
 //}
+
+.main-header{
+  margin-top: -720px;
+}
+
+h1{
+  position:relative;
+}
+
+#table{
+  position:relative;
+  z-index:1;
+  border:2px solid white;
+  border-radius:25px;
+  background-color:rgba(255,255,255,0.5);
+}
+
+#bigvideo {
+  z-index: -1;
+}
