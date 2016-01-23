@@ -7,7 +7,7 @@
 
     <div class = "row" id="search-container">
 
-      <div class="col-sm-3">
+      <div class="col-sm-3 search-box">
         <%= form_tag("/search", method:"get") do %>
 
         <%= label_tag(:food_item, "What are you in the mood for?")%>
@@ -17,7 +17,7 @@
         <% end %>
       </div>
 
-      <div class="col-sm-2">
+      <div class="col-sm-2 select-distance-box">
         <%= radio_button_tag(:distance, "Close")%>
         <%= label_tag(:less_than_five, "Less Than 5 miles") %> <br>
         <%= radio_button_tag(:distance, "5 miles") %>
@@ -28,7 +28,7 @@
         <%= label_tag(:five, "More Than 10 miles") %><br>
       </div>
 
-      <div class="col-sm-3">
+      <div class="col-sm-3 search-box">
         <%= form_tag("/search", method:"get") do %>
 
         <%= label_tag(:truck_name, "Find a Truck you like:")%>
@@ -104,7 +104,6 @@
           </tbody>
         </table>
       </div>
-
     </div>
   </div>
 
@@ -115,7 +114,7 @@
           var BV = new $.BigVideo();
           BV.init();
           // BV.show("<%= request.protocol + "/" + request.host_with_port + asset_path('foodvideo.mp4') %>",{ambient:true});
-          BV.show("http://media5001.dropshots.com/photos/1322828/20160122/204622.mp4",{ambient:true});
+          BV.show("http://media5001.dropshots.com/photos/1322828/20160122/205327.mp4",{ambient:true});
         });
       // });
     </script>
