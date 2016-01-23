@@ -7,8 +7,6 @@
 
     <div class = "row" id="search-container">
 
-      <div class="col-sm-2"></div>
-
       <div class="col-sm-3">
         <%= form_tag("/search", method:"get") do %>
 
@@ -112,13 +110,13 @@
 
   <div id="bigvideo">
     <script>
-      $( document ).ready(function() {
+      // $( document ).ready(function() {
         $(function() {
           var BV = new $.BigVideo();
           BV.init();
           BV.show("<%= request.protocol + "/" + request.host_with_port + asset_path('foodvideo.mp4') %>",{ambient:true});
         });
-      });
+      // });
     </script>
   <div>
 
