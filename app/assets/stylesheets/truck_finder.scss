@@ -3,51 +3,49 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .container {
-  margin-left: 10px !important;
-  margin-right: 10px !important;
+  margin-left: 0% !important;
+  position: absolute;
+  left: 4%;
+}
+
+.main-container {
+  border: 2px dashed lime;
+  top: 20px;
 }
 
 #map {
+   display:inline-block;
    height: 400px;
    width: 60%;
-
    border-radius: 16px 16px;
-   border-color: #fff;
-   border-style: solid;
-   border-width: 7px;
-
    box-shadow: 2px 2px 10px #B1B1B1;
    margin-top: 20px;
+   left: 15px;
  }
 
  #table {
-  height:530px;
-  margin-left: 30px;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  height:400px;
   width: 30%;
   color: black;
+  border:2px solid white;
+  border-radius:25px;
   font-family: 'Slabo 27px', serif;
   font-weight: 600;
+  background-color:rgba(255,255,255,0.5);
+  z-index:1;
+  display:inline-block; 
+  overflow-y: auto;
  }
 
-.main-header{
-  margin-top: -720px;
-  margin-left: 75px;
-}
-
-h1{
-  position:relative;
+h1 {
+  position: relative;
   font-family: 'IndieFlower';
   font-style: normal;
   font-weight: 500;
   src: local('IndieFlower'), local('IndieFlower'), url(../fonts/IndieFlower.ttf) format('truetype');
-}
-
-#table{
-  position:relative;
-  z-index:1;
-  border:2px solid white;
-  border-radius:25px;
-  background-color:rgba(255,255,255,0.5);
 }
 
 td{
@@ -61,11 +59,10 @@ td{
 #title-header {
   border: 2px solid white;
   position: relative;
-  margin-top: 20px;
+  margin-top: 10px;
   margin-bottom: 20px;
   margin-right: 250px;
   margin-left: 250px;
-  right: 45px;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.7);
   font-family: 'Lobster', cursive;
@@ -78,7 +75,6 @@ td{
   border-radius: 15px;
   margin-right: 100px;
   margin-left: 100px;
-  right: 45px;
 }
 
 #search-container div {
@@ -94,3 +90,9 @@ td{
 .select-distance-box {
   margin-top: 2px;
 }
+
+.truck-container {
+  border: 2px solid teal;
+  top: 234px;
+}
+
