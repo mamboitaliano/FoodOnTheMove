@@ -9,7 +9,6 @@
 }
 
 .main-container {
-  border: 2px dashed lime;
   top: 20px;
 }
 
@@ -34,7 +33,7 @@
   border-radius:25px;
   font-family: 'Slabo 27px', serif;
   font-weight: 600;
-  background-color:rgba(255,255,255,0.5);
+  background-color:rgba(255, 255, 255, 0.7);
   z-index:1;
   display:inline-block; 
   overflow-y: auto;
@@ -92,7 +91,6 @@ td{
 }
 
 .truck-container {
-  border: 2px solid teal;
   top: 234px;
 }
 

@@ -21,3 +21,4 @@ class CreateTrucks < ActiveRecord::Migration
     end
   end
 end
+

@@ -29,6 +29,9 @@ gem 'dotenv-rails', :groups => [:development, :test]
 #yelp api gem
 gem 'yelp', require: 'yelp'
 
+#httparty
+gem 'httparty'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
