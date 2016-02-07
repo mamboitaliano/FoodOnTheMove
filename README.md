@@ -3,32 +3,15 @@
 
 FoodOnTheMove is a Ruby on Rails web app built for the DevBootcamp November Hackathon that allows users to located and track food trucks throughout San Francisco. The application features an interactive map that allows users to view which food trucks will be at a given location on a given day of the week. 
 
-Features include:
+*Features include:*
 - An interacive map showing food trucks throughout the city
 - Ability to filter out food trucks based on food type category
 
 
 
---------
-
-google maps api
-yelp api
+*APIs Used:*
+Google Maps - pass in longitude lat for pin points
+Yelp
 SF OpenData
-
-MVP
-----Google Maps----
-pass in longitude lat for pin points
-
-pass in current location, and potentional distance and given point
-
-----SF OpenData----
-filters on data in this data base
-
-basic filters- fooditems, food categories
-
-
-----Yelp api-----
-Pass in name of food truck for basic reviews and information.
-
 
 
