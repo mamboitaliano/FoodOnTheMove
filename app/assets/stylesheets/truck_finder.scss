@@ -57,14 +57,13 @@ td{
 
 #title-header {
   border: 2px solid white;
-  position: relative;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  margin-right: 250px;
-  margin-left: 250px;
-  border-radius: 15px;
-  background: rgba(255, 255, 255, 0.7);
-  font-family: 'Lobster', cursive;
+    position: relative;
+    width: 40%;
+    left: 30%;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    font-family: 'Lobster', cursive;
 }
 
 #search-container {
@@ -72,8 +71,8 @@ td{
   position: relative;
   background: rgba(255, 255, 255, 0.7);
   border-radius: 15px;
-  margin-right: 100px;
-  margin-left: 100px;
+  width: 82%;
+  left: 9%;
 }
 
 #search-container div {
